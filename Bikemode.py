@@ -29,11 +29,16 @@ steel_frame = frames(1.50, 4.50, "steel")
 class models():
 
 class manufacturers():
-	
+
 
 class shops()
 
 
 
-class customers()
+class customers():
+	budget = 2000
+	shop_cart ={}
+
+	def __init__(self, customer_name):
+		self.customer_name = customer_name
 
