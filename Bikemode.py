@@ -37,12 +37,22 @@ class shops()
 
 class customers():
 	budget = 2000      #Total Customer Budget for purchasing bikes
-	shop_cart ={}		#Shopping Cart
+	shop_cart ={}		#Customers wishlist
+	purchase_amount = {i}		#Amount of Bike Purchase
 
 	def __init__(self, customer_name):
 		self.customer_name = customer_name
 
-	def cart_inventory(self):
-		for i in self.shop_cart:
-			
+	def budget_count(self):
+		for i in self.budget:
+			self.budget -=self.purchase_amount{i}
+		return "The total amount of money left is {}".format(self.budget)
+
+		if self.purchase_amount >= self.budget:
+			return # Attempting to return a null transaction request
+		else:
+			return "Not enough money to purchase bike"
+
+
+
 
