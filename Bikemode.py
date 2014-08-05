@@ -36,9 +36,13 @@ class shops()
 
 
 class customers():
-	budget = 2000
-	shop_cart ={}
+	budget = 2000      #Total Customer Budget for purchasing bikes
+	shop_cart ={}		#Shopping Cart
 
 	def __init__(self, customer_name):
 		self.customer_name = customer_name
+
+	def cart_inventory(self):
+		for i in self.shop_cart:
+			
 
