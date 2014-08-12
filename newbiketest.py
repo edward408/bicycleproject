@@ -39,18 +39,27 @@ class Manufacturer():
     def get_percentage(self):
         return self.percentage
 
+    def __str__(self):
+		return "bike brand is {} name is {} percentage is {}".format(self.generate_bikes(), self.name, self.percentage)
+
     def generate_bikes(self):
         bikeList = []
         frameList = [frame_1, frame_2, frame_3]
         wheelList = [wheel_1, wheel_2, wheel_3]
 
         for i in range(3):
-            bb = Bike(self._name, i+1)
+            bb = Bike(self.name, i+1)
             bb.set_frame(frameList[i])
             bb.set_wheels(wheelList[i])
             bikeList.append(bb.generate_bike())
 
         return bikeList
+
+class Shop():
+	pass
+
+class Customer():
+	pass
 
 
 
