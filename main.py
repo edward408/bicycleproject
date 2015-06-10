@@ -1,11 +1,12 @@
 from bikes import *
 
 
+
+customer_1 = Customers("Jeff",50)
+customer_2 = Customers("Ryan",100)
+customer_3 = Customers("John",30)
+cust_list = [customer_1,customer_2,customer_3]
 def customers_walkin():
-    customer_1 = Customers("Jeff",50)
-    customer_2 = Customers("Ryan",100)
-    customer_3 = Customers("John",30)
-    cust_list = [customer_1,customer_2,customer_3]
     for customers in cust_list:
         customers.display_customers()
         
@@ -23,17 +24,24 @@ def main():
 
     store = Bike_Shop("Bobs Bike Shop")
     for bikes in bike_list:
-        store.bike_inventory.append(bikes)
+        store.bike_inventory[bikes.model]=bikes.retail_cost
 
     print (store.bike_inventory)
+
+    for customers in cust_list:
+        for bikes in bike_list:
+            if customers.budget > bikes.retail_cost:
+                customers.shopping_cart[bikes.model]= bikes.retail_cost
+                customers.budget =- bikes.retail_cost
+                print customers.budget
+        
+        
 
     
 
 
 if __name__ == '__main__':
     main()
-
-
 
 
 
