@@ -14,7 +14,7 @@ class Bike_Shop(object):
     """Defines the bike shop with its respective inventory"""
     def __init__(self,store_name):
         self.store_name = store_name
-        self.bike_inventory = []
+        self.bike_inventory = {}
         
 
     def display_bikes(self):
@@ -35,4 +35,7 @@ class Customers(object):
     def display_customers(self):
         print "Customer is %s and with a budget of %s dollars" % (self.name, self.budget)
     
+
+
+
 
