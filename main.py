@@ -31,8 +31,9 @@ def main():
     for customers in cust_list:
         for bikes in bike_list:
             if customers.budget > bikes.retail_cost:
+                print customers.name + " " + "Can Afford", bikes.model
                 customers.shopping_cart[bikes.model]= bikes.retail_cost
-                customers.budget =- bikes.retail_cost
+                customers.budget -= bikes.retail_cost
                 print customers.budget
         
         
